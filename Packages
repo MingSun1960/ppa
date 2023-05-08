@@ -1,0 +1,66 @@
+Package: linuxcnc-uspace
+Source: linuxcnc
+Version: 1:2.9.0~pre1
+Architecture: arm64
+Maintainer: LinuxCNC Developers <emc-developers@lists.sourceforge.net>
+Installed-Size: 89093
+Depends: python3 (<< 3.7), python3 (>= 3.6~), python3:any (>= 3.3.2-2~), libboost-python1.65.1, libc6 (>= 2.27), libcairo2 (>= 1.2.4), libepoxy0 (>= 1.0), libgcc1 (>= 1:4.0), libglib2.0-0 (>= 2.12.0), libgtk-3-0 (>= 3.11.5), libgtk2.0-0 (>= 2.8.0), libmodbus5 (>= 3.0.2), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libpython3.6 (>= 3.6.5), libreadline5 (>= 5.2), libstdc++6 (>= 5.2), libtk8.6 (>= 8.6.0), libudev1 (>= 183), libusb-1.0-0 (>= 2:1.0.9), libx11-6, libxinerama1, libxmu6, libudev-dev, iptables, blt, mesa-utils, python3-tk, python3-numpy, python3-cairo, python3-gi-cairo, python3-opengl, python3-configobj, python3-xlib, libgtksourceview-3.0-dev, tcl8.6, tk8.6, bwidget (>= 1.7), tclreadline, tclx, procps, psmisc, udev
+Recommends: linuxcnc-doc-en | linuxcnc-doc, librsvg2-dev, hostmot2-firmware-all, python3-pil, python3-pil.imagetk, python3-pyqt5, python3-pyqt5.qsci, python3-pyqt5.qtsvg, python3-pyqt5.qtopengl, python3-opencv, python3-dbus, python3-espeak, python3-dbus.mainloop.pyqt5, python3-pyqt5.qtwebkit, espeak-ng, pyqt5-dev-tools, gstreamer1.0-tools, espeak, sound-theme-freedesktop, python3-poppler-qt5
+Suggests: mesaflash, onboard
+Conflicts: linuxcnc, linuxcnc-sim
+Breaks: linuxcnc-doc-en (<= 2.9.0~pre0+git20220402.2500863908-4), linuxcnc-doc-es (<= 2.9.0~pre0+git20220402.2500863908-4), linuxcnc-doc-fr (<= 2.9.0~pre0+git20220402.2500863908-4)
+Filename: ./linuxcnc-uspace_2.9.0~pre1_arm64.deb
+Size: 25558608
+MD5sum: 7a06bc9f3b096d00f33dab1ed35d87d7
+SHA1: d885a56b5cca999ee5aeb26f491e919ae9d262f8
+SHA256: 727680aba64136f8e6215ce5bedb0efad256503a4eb3e0082b5bd56e70e22938
+Section: misc
+Priority: optional
+Homepage: https://linuxcnc.org/
+Description: motion controller for CNC machines and robots
+ LinuxCNC is a fully-realised CNC machine controller that can interpret
+ machine-control programs (such as G-code), plan trajectories and finally
+ output low-level signals to machine control hardware
+ .
+ LinuxCNC is modular and in principle the HAL (hardware abstraction layer),
+ pluggable interpreters and variety of hardware drivers mean that it can
+ control almost any software-defined physical system.
+ .
+ LinuxCNC relies on a realtime kernel to support real-time motion control,
+ typically updating the position waypoints every 1mS and reacting to
+ input within tens of microseconds.
+ .
+ Modules exist to use the low-level parts of LinuxCNC as a motion-control
+ client for OpenPnP. Interfaces exist for ROS (the Robot Operating System)
+ with which LinuxCNC has considerable overlap.
+ .
+ LinuxCNC supports arbitrary kinematics (the mapping between coordinate
+ space and actuator space) and can control both parallel (eg Stewart
+ platform) and serial (eg robot arm) systems in addition to conventional
+ cartesian machine tools.
+ .
+ LinuxCNC supports 9 cartesian axes and 16 "Joints" (individual actuators)
+ though the joint limit is build-time configurable.
+ .
+ A variety of interface hardware is supported including Modbus, EtherCAT,
+ analogue +/-10V velocity control and Step/Dir. Step/Dir is supported by
+ several hardware interfaces, including, but not limited to, the legacy
+ Parallel Port.
+ .
+ A Hardware Abstraction Layer allows for great flexibility in signal
+ mapping between the controller and the driver hardware. An extensive
+ library of modules allow for complex signal processing within the HAL
+ layer. For specialised tasks custom HAL components can be created using
+ a C-like syntax and installed with the supplied tools.
+ .
+ By default LinuxCNC supports RS274 G-code but is extendable to parse
+ other grammars such as STEP-NC or Gerber through support for pluggable
+ interpreters.
+ .
+ If you want a computer to control things in the real world
+ then LinuxCNC can do it. It is especially applicable to systems that
+ are required to follow accurate paths described in cartesian space but
+ has been used for numerous other applications.
+ .
+ This package provides the main package for LinuxCNC.
+
